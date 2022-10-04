@@ -13,7 +13,7 @@ public class FactorialCalculationApp {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
-        System.out.println(number + "! = " + calculateFactorialNumber(number));
+        System.out.println(calculateFactorialNumber(number));
 
 
     }
@@ -21,6 +21,16 @@ public class FactorialCalculationApp {
         if (value < 2){
             return 1;
         }
-        return 0;
+
+        //weitere Fälle
+        long result = 1;
+        int number = 1;
+        while (number < value) {
+            number++;
+            result = result * number;
+            //sout("result = " + number)
+
+        }
+        return result;
     }
 }
